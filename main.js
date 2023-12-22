@@ -68,13 +68,11 @@ async function toggleRotate() {
     SDK3DVerse.engineAPI.playAnimationSequence(
       "19895069-14e2-4bb5-bf23-d958ee630b1d" // Remplacez par l'UUID de votre séquence d'animation
     );
-    btnToggleRotateLeft.innerText = "Stop Rotation";
   } else {
     // Arrêter l'animation de rotation
     SDK3DVerse.engineAPI.pauseAnimationSequence(
       "19895069-14e2-4bb5-bf23-d958ee630b1d" // Remplacez par l'UUID de votre séquence d'animation
     );
-    btnToggleRotateLeft.innerText = "Start Rotation";
   }
 }
 
@@ -144,6 +142,15 @@ async function updateCamera(property) {
               atmosphere: false,
             },
           });
+    }
+
+    if(property === "atmosphere") {
+      camera.setComponent("camera", {
+        dataJSON:{
+          ...camera.getComponent("camera").dataJSON,
+          gradient: false,
+        },
+      });   
     }
 
     if (camera.isAttached("camera")) {
