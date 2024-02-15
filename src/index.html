@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./main.css">
+    <title>Bootstrap w/ Webpack</title>
+  </head>
+  <body>
+    <div class="container py-4 px-3 mx-auto">
+      <h1>Hello, Bootstrap and Webpack!</h1>
+      <button class="btn btn-primary">Primary button</button>
+      <button class="btn btn-secondary">Secondary button</button>
+      <button is=corpus-ia-toolbar-button title="Toogle Offcanvas" onclick="document.getElementById('test-offcanvas').toggle()"></button>
+      <corpus-ia-offcanvas id="test-offcanvas">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.
+        </div>
+      </corpus-ia-offcanvas>
+    </div>
+  </body>
+</html>
