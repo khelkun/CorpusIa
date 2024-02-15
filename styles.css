@@ -1,0 +1,109 @@
+/* FONTS */
+@font-face {
+  font-family: 'Azo Sans';
+  src: url(./fonts/azo-sans-regular.otf) format("opentype");
+}
+
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #FCFCFC;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #6100FF;
+  border-radius: 20px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Azo Sans';
+}
+
+.canvas-container {
+  width: 75vw;
+  height: 75vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+canvas {
+  height: 75vh;
+  width: 75vw;
+  vertical-align: middle;
+}
+
+.button-container {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  bottom: 2rem;
+  left: 2rem;
+}
+
+button {
+  position: relative;
+}
+
+.all {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.all button {
+  border: none;
+  background-color: #6100FF;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.displaybutton {
+  padding: 10px;
+}
+
+.allbutton {
+  padding: 10px;
+  gap : 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 10px;
+  border-radius: 20px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--Primary-1, #6100FF);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--Primary-1, #6100FF);
+  cursor: pointer;
+}
